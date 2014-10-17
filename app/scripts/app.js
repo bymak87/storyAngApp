@@ -56,7 +56,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     // catch all route
     // send users to the form page
-    $urlRouterProvider.otherwise('/start');
+    $urlRouterProvider.otherwise('form/start');
 })
 
 // our controller for the form
