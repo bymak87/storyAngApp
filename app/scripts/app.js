@@ -61,16 +61,23 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 // our controller for the form
 // =============================================================================
-app.controller('formController', function($scope) {
+app.controller('formController', ['$scope', '$resource', function($scope, $resource) {
 
+  var Form = $resource('/api/stories');
+
+  Form.query(function (results){
+    $scope.formData = results;
+  });
     // we will store all of our form data in this object
-    $scope.formData = {};
+
+    // $scope.formData = {};
 
 
     // function to email the story
-    $scope.processForm = function() {
-      $scope.formData["story"]=("");
-         alert($scope.formData.email);
+    $scope.processForm = function(result) {
+      var form = new Form();
+      form.story = $scope.
+
     };
     //scope and functions to select action
     $scope.intro = function(){
@@ -133,7 +140,7 @@ app.controller('formController', function($scope) {
     $scope.compile = function() {
          $scope.formData["story"]= $scope.formData.intro + $scope.formData.middle + $scope.formData.climax + $scope.formData.ending ;
     };
-})
+}])
 
 //directive for the form
 // =============================================================================
