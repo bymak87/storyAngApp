@@ -1,0 +1,45 @@
+<!-- Sneak option-->
+<div ng-show="sneak">
+ <p>You try to sneak past him. Uh-oh... he smells you, even though he can't smell himself. He get's angry
+ and starts running towards you and {{formData.friendName}}.
+ <br>
+   <label>What do you and {{formData.friendName}} do?</label>
+ </p>
+ <br>
+ <div class="col-xs-6 col-xs-offset-3">
+
+
+ <button ng-click="fightf()" ui-sref="form.climax" class="btn btn-block btn-info">
+   Fight him <span class="glyphicon glyphicon-circle-arrow-right"></span>
+   </button>
+   <br>
+   <button ng-click="runf()" ui-sref="form.climax" class="btn btn-block btn-info">
+   Run to the woods!! <span class="glyphicon glyphicon-circle-arrow-right"></span>
+   </button>
+
+</div>
+</div>
+
+<!-- Talk option,-->
+<div ng-show="talk">
+  <p >You slowly approach him and talk to him. He is acutally really nice. He just wants some friends. He gives you food
+  for your quest and warns you about the evil elves that will appear in the woods.</p>
+<label>What do you and {{formData.friendName}} do?</label>
+<br>
+<br>
+<div class="col-xs-6 col-xs-offset-3">
+
+
+  <button ng-click="runf()" ui-sref="form.climax" class="btn btn-block btn-info">
+    Proceed to the woods <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </button>
+    <br>
+    <button ng-click="avoidf()" ui-sref="form.climax" class="btn btn-block btn-info">
+    Avoid the woods <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </button>
+
+</div>
+</div>
+
+
+

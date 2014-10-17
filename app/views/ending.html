@@ -1,0 +1,64 @@
+<!-- Castle option-->
+<div ng-show="castle">
+<p> You and {{formData.friendName}} decide to go towards the castle. You reach the castle. You explore it and you find tons of gold.</p>
+<br>
+  <label>You both become a very wealthy people and live happily ever after!</label>
+<br>
+<div class="col-xs-6 col-xs-offset-3">
+
+
+<button ng-click="compile()" ui-sref="form.story" class="btn btn-block btn-info">
+  The End <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  </button>
+  <br>
+</div>
+</div>
+
+<!-- leave option-->
+<div ng-show="leave">
+<p> You leave {{formData.friendName}} and stumble out of the woods. You see a castle and decide to go inside. You explore it and you find tons of gold.</p>
+<br>
+  <label>You become a very wealthy person but you miss {{formData.friendName}}!</label>
+<br>
+<div class="col-xs-6 col-xs-offset-3">
+
+
+<button ng-click="compile()" ui-sref="form.story" class="btn btn-block btn-info">
+  The End <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  </button>
+  <br>
+
+</div>
+</div>
+
+<!--go home option -->
+<div ng-show="home">
+  <p >You decide to go home. You wasted all this time and you have nothing to show for it.</p>
+<label>You are sad :(</label>
+<br>
+<div class="col-xs-6 col-xs-offset-3">
+
+
+  <button ng-click="compile()" ui-sref="form.story" class="btn btn-block btn-info">
+    The End <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </button>
+    <br>
+</div>
+</div>
+
+<!--surrender/woods option -->
+<div ng-show="surrender">
+  <p >You and {{formData.friendName}} have been captured and the elves will not let you live...</p>
+<label>This is the end for you and {{formData.friendName}}.</label>
+<br>
+<div class="col-xs-6 col-xs-offset-3">
+
+    <br>
+    <button ng-click="compile()" ui-sref="form.story" class="btn btn-block btn-info"> The End
+     <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </button>
+
+</div>
+</div>
+
+

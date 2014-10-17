@@ -1,0 +1,60 @@
+<!-- Woods option-->
+<div ng-show="run">
+<p>You and {{formData.friendName}} run into the woods and some evil elves appear
+They shoot arrows at you. One hits {{formData.friendName}}.</p>
+<br>
+  <label>What do you and {{formData.friendName}} do?</label>
+<br>
+<div class="col-xs-6 col-xs-offset-3">
+
+
+<button ng-click="surrenderf()" ui-sref="form.ending" class="btn btn-block btn-info">
+  Surrender <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  </button>
+  <br>
+  <button ng-click="leavef()" ui-sref="form.ending" class="btn btn-block btn-info">
+  Leave {{formData.friendName}} <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  </button>
+
+</div>
+</div>
+
+<!--Avoid woods option -->
+<div ng-show="avoid">
+  <p >You stumble upon a winding path that will
+  lead you to a castle that looks abandoned.</p>
+<label>What do you and {{formData.friendName}} do?</label>
+<br>
+<div class="col-xs-6 col-xs-offset-3">
+
+
+  <button ng-click="castlef()" ui-sref="form.ending" class="btn btn-block btn-info">
+    Travel to the Castle <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </button>
+    <br>
+    <button ng-click="homef()" ui-sref="form.ending" class="btn btn-block btn-info"> Go back home
+    <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </button>
+
+</div>
+</div>
+<!-- Fight -->
+<div ng-show="fight">
+  <p>You try to fight the ogre but he doesn't want to fight. He runs into the woods but you notice a castle in the distance.</p>
+<label>What do you and {{formData.friendName}} do?</label>
+<br>
+<br>
+<div class="col-xs-6 col-xs-offset-3">
+
+
+  <button ng-click="surrenderf()" ui-sref="form.ending" class="btn btn-block btn-info">
+    Follow the ogre<span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </button>
+    <br>
+    <button ng-click="castlef()" ui-sref="form.ending" class="btn btn-block btn-info">
+    Take the path<span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </button>
+
+</div>
+</div>
+

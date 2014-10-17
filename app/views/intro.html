@@ -1,0 +1,22 @@
+<div class="intro">
+  <p>Hello {{formData.name}} and welcome {{formData.friendName}}.You see and smell a very smelly ogre in the middle of the road.
+  </p>
+</div>
+<br>
+<label>What do you and {{formData.friendName}} do?</label>
+<br>
+<br>
+
+<div class="col-xs-6 col-xs-offset-3">
+
+
+  <button ng-click="sneakf()" ui-sref="form.middle" class="btn btn-block btn-info">
+    Sneak past him <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </button>
+    <br>
+    <button ng-click="talkf()" ui-sref="form.middle" class="btn btn-block btn-info">
+    Talk to him <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </button>
+
+</div>
+
