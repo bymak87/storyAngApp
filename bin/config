@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Story App uses the Mandrill e-mail API to send e-mails.
+# A valid Mandrill key is needed to interact with the service.
+# more info: https://mandrillapp.com/api/docs/
+
+
+export MANDRILL_API_KEY=F6re5GD1lGErQascsJDCNA
+
+# ^ Uncomment this line and replace `key_here` with your API key.
+
